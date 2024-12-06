@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}contact{% endblock title %}
+
+{% block contactactive %}active{% endblock contactactive %}
+
+{% block css %}
+<style>
+  .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-container {
+    width: 100%;
+    max-width: 500px; /* Limits form width */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+</style>
+{% endblock css %}
+
+{% block body %}
+<div class="container ">
+ <div class="form-container">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="Phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="Phone" name="Phone" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
+</div> 
+{% endblock body %}
